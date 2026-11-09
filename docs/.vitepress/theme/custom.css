@@ -1,0 +1,490 @@
+/* Network Observatory & High-End SEO/GEO Dark Theme */
+:root {
+  --vp-c-brand-1: #06b6d4;
+  --vp-c-brand-2: #0891b2;
+  --vp-c-brand-3: #0e7490;
+  --vp-c-brand-soft: rgba(6, 182, 212, 0.14);
+
+  --vp-c-bg: #0b0f19;
+  --vp-c-bg-alt: #0f172a;
+  --vp-c-bg-elv: #131d33;
+  --vp-c-bg-soft: #1e293b;
+
+  --vp-c-border: #1f2937;
+  --vp-c-divider: #1e293b;
+  --vp-c-text-1: #f3f4f6;
+  --vp-c-text-2: #9ca3af;
+  --vp-c-text-3: #6b7280;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #38bdf8 20%, #34d399 80%);
+  --vp-home-hero-image-filter: drop-shadow(0 0 45px rgba(6, 182, 212, 0.35));
+}
+
+html.dark {
+  --vp-c-bg: #070a12;
+  --vp-c-bg-alt: #0d121f;
+  --vp-c-bg-elv: #131a2b;
+}
+
+/* Hero Avatar Styling */
+.VPHomeHero .image-src {
+  border-radius: 20px !important;
+  box-shadow: 0 0 35px rgba(6, 182, 212, 0.4), 0 0 70px rgba(16, 185, 129, 0.2) !important;
+  border: 2px solid rgba(56, 189, 248, 0.5) !important;
+  max-height: 380px !important;
+  width: auto !important;
+  transition: all 0.3s ease !important;
+}
+
+.VPHomeHero .image-src:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 0 45px rgba(6, 182, 212, 0.6), 0 0 90px rgba(16, 185, 129, 0.35) !important;
+}
+
+/* Nav Logo Styling */
+.VPNavBarTitle .logo {
+  border-radius: 50% !important;
+  border: 1px solid rgba(56, 189, 248, 0.5) !important;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.4) !important;
+}
+
+/* Fix Hero Action Buttons Contrast (解决按钮白底白字看不清问题) */
+.VPButton.alt {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  font-weight: 700 !important;
+}
+
+.VPButton.alt:hover {
+  background-color: #0f172a !important;
+  color: #34d399 !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4) !important;
+}
+
+.VPButton.brand {
+  background: linear-gradient(135deg, #06b6d4 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35) !important;
+}
+
+.VPButton.brand:hover {
+  filter: brightness(1.15) !important;
+  box-shadow: 0 6px 25px rgba(6, 182, 212, 0.5) !important;
+}
+
+/* Observability Card Container */
+.obs-card {
+  background: linear-gradient(145deg, rgba(19, 29, 51, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(6, 182, 212, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.obs-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #06b6d4, #10b981, transparent);
+}
+
+.obs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.75rem;
+}
+
+.obs-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 !important;
+}
+
+.obs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-measured {
+  background: rgba(6, 182, 212, 0.15);
+  color: #22d3ee;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+.badge-operational {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.badge-partial {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.badge-vendor {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+/* Metric Grid */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.metric-box {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.metric-value.cyan {
+  color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+}
+
+.metric-value.emerald {
+  color: #34d399;
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.3);
+}
+
+/* Affiliate Conversion Buttons */
+.aff-cta-banner {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.aff-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.aff-btn-primary {
+  background: linear-gradient(135deg, #06b6d4 0%, #059669 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
+  border: none;
+}
+
+.aff-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+  filter: brightness(1.1);
+}
+
+.aff-disclaimer {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-top: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+/* Geo Answer Summary Box for AEO & AI Overview Citation */
+.geo-answer-box {
+  background: rgba(16, 185, 129, 0.08);
+  border-left: 4px solid #10b981;
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.geo-answer-box strong {
+  color: #34d399;
+}
+
+/* Image Benchmark Frame */
+.benchmark-img-frame {
+  background: #030712;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.benchmark-img-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.benchmark-caption {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  padding: 0.5rem 1rem;
+  background: rgba(15, 23, 42, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsive Table with Smooth Horizontal Scroll (彻底解决表格挤压折行与右侧重叠) */
+.vp-doc table {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  border-collapse: collapse !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 8px;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.vp-doc th {
+  background-color: #131d33 !important;
+  color: #38bdf8 !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid #1f2937 !important;
+  padding: 12px 14px !important;
+  white-space: nowrap !important;
+  text-align: left;
+}
+
+.vp-doc td {
+  border-bottom: 1px solid #131d33 !important;
+  padding: 10px 14px !important;
+  white-space: nowrap !important;
+  font-size: 0.88rem !important;
+  vertical-align: middle !important;
+}
+
+.vp-doc tr:hover td {
+  background-color: rgba(30, 41, 59, 0.6) !important;
+}
+
+/* Action Badge Button in Table */
+.vp-doc td a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap !important;
+  padding: 4px 10px;
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  border-radius: 6px;
+  color: #38bdf8 !important;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.vp-doc td a:hover {
+  background: rgba(6, 182, 212, 0.28);
+  border-color: #38bdf8;
+  color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+/* High Contrast for all Code Blocks & Mermaid fallback (彻底解决代码块暗黑看不清) */
+.vp-doc [class*='language-'] pre,
+.vp-doc [class*='language-'] code,
+.vp-doc pre code,
+.vp-doc code {
+  color: #f8fafc !important;
+  font-weight: 500 !important;
+}
+
+.vp-doc div[class*='language-'] {
+  background-color: #0d1527 !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Ensure document container expands gracefully on wide screens */
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+
+/* Interactive Decision Flow & Scenario Styling */
+.decision-flow-container,
+.scenario-flow-container {
+  background: linear-gradient(145deg, rgba(19, 29, 51, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.decision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.decision-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.decision-card:hover {
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.2);
+}
+
+.card-num {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #38bdf8;
+  font-family: monospace;
+  margin-bottom: 0.25rem;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.35rem;
+}
+
+.card-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.decision-result {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 8px;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.result-badge {
+  background: #10b981;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.result-text {
+  color: #e2e8f0;
+  font-size: 0.92rem;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.scenario-item {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scenario-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.scenario-item h4 {
+  margin: 0 0 0.5rem 0 !important;
+  color: #f8fafc;
+  font-size: 1.05rem;
+}
+
+.scenario-req {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.scenario-target {
+  font-size: 0.85rem;
+  color: #34d399;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-top: 0.5rem;
+}
